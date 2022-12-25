@@ -46,5 +46,11 @@ int main() {
 
     cout << sizeof(t_v) << endl; // 8
 
+    // pair<int, string> p(7, "C++");
+    // auto p = make_pair(7, "C++");
+    pair p(7, "C++");
+
+    cout << p.first << " " << p.second << endl; // 7 C++
+
     return 0;
 }
