@@ -2,7 +2,8 @@
 #include <vector>
 #include <string>
 #include <tuple>
-#include <utility> 
+#include <utility>
+#include <map>
 
 using namespace std;
 
@@ -51,6 +52,13 @@ int main() {
     pair p(7, "C++");
 
     cout << p.first << " " << p.second << endl; // 7 C++
+
+    map<int, string> digits = {{1, "one"}};
+    for (const auto& item : digits) { // можно сразу написать const pair<int, string>& item : digits
+        // в новых стандартах можно использовать const auto& [key, value] : digits
+        // выводить переменные key value
+        cout << item.first << " " << item.second << endl; // 1 one
+    }
 
     return 0;
 }
